@@ -25,6 +25,7 @@ group :development, :test do
   gem "newrelic_rpm"
   gem "airbrake", "~> 9.0"
   gem "rollbar"
+  gem 'bunny-mock'
 end
 
 group :development, :darwin do

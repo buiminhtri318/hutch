@@ -5,7 +5,13 @@ if defined?(JRUBY_VERSION)
   end
 else
   require 'hutch/adapters/bunny'
+  require 'hutch/config'
   module Hutch
-    Adapter = Adapters::BunnyAdapter
+    if Config.get(:test_mode)
+      p 'setting mock adapters!'
+      Adapter = Adapters::BunnyMockAdapter
+    else
+      Adapter = Adapters::BunnyAdapter
+    end
   end
 end

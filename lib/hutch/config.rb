@@ -142,6 +142,9 @@ module Hutch
     # Prefix displayed on the consumers tags.
     string_setting :consumer_tag_prefix, 'hutch'
 
+    # is Hutch running in test mode
+    boolean_setting :test_mode, false
+
     string_setting :group, ''
 
     # Set of all setting keys
